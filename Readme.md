@@ -37,9 +37,9 @@ The image below shows the physical setup required to work with either the ARM De
 Connect the embedded board (NXP Evaluation Board or ARM Cortex-R Automotive Development System) as follows:
 
 - Power via the standard power connector
-- Debugging interface via JTAG to the PC (via SEGGER J-Link or Lauterbach probe)
+- Debugging interface via JTAG to the PC (via S32 debug probe or Lauterbach probe)
 - Ethernet cable to the same network as the PC
-- Serial connection to view console output (e.g., via USB-UART converter)
+- Serial connection to view console output (e.g., via USB-UART)
 
 > 💡 Use `/dev/ttyUSB*` on Linux or `COM*` on Windows and configure your serial tool (e.g. PuTTY or minicom) to 115200 baud.
 
