@@ -1,0 +1,52 @@
+# Copyright (c) 2023, Arm Limited.
+# SPDX-License-Identifier: Apache-2.0
+
+config NET_IFACE1_ADDR
+	string "Address for interface 1"
+	default ""
+
+config NET_IFACE1_GW
+	string "Gateway for interface 1"
+	default ""
+
+config NET_IFACE1_NETMASK
+	string "Netmask for interface 1"
+	default ""
+
+config NET_IFACE1_VLAN
+	int "VLAN identifier for interface 1"
+	default 0
+	help
+	  When different from 0, it sets the VLAN id for the interface 1.
+	  Use 0 here if uncertain.
+
+config NET_IFACE2_ADDR
+	string "Address for interface 2"
+	default ""
+
+config NET_IFACE2_GW
+	string "Gateway for interface 2"
+	default ""
+
+config NET_IFACE2_NETMASK
+	string "Netmask for interface 2"
+	default ""
+
+config NET_IFACE2_VLAN
+	int "VLAN identifier for interface 2"
+	default 0
+	help
+	  When different from 0, it sets the VLAN id for the interface 2.
+	  Use 0 here if uncertain.
+
+# Override the range of MAX_PTHREAD_MUTEX_COUNT from zephyr/lib/posix/Kconfig
+config MAX_PTHREAD_MUTEX_COUNT
+	range 0 30000
+
+config DDS_NETWORK_INTERFACE
+	string "Name of the network interface to be used by CycloneDDS"
+	help
+	  When left undefined, CycloneDDS will automatically select an interface
+	  based on its own criteria.
+
+source "Kconfig.zephyr"

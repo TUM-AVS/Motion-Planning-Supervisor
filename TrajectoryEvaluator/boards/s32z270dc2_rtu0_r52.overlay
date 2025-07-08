@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2022-2023, Arm Limited.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/{
+	soc {
+		sram2: memory@32100000 {
+			compatible = "mmio-sram";
+			reg = <0x32100000 DT_SIZE_M(7)>;
+		};
+	};
+
+	chosen {
+		zephyr,sram = &sram2;
+	};
+};
+
+&enetc_psi0 {
+	local-mac-address = [BA DA 01 04 57 E2];
+};

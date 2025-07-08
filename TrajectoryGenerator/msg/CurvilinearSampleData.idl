@@ -1,0 +1,19 @@
+module custom_trajectory_msgs {
+  module msg {
+    struct CurvilinearSampleData {
+      sequence<double> s;
+
+      sequence<double> d;
+
+      sequence<double> theta;
+
+      sequence<double> dd;
+
+      sequence<double> ddd;
+
+      sequence<double> ss;
+
+      sequence<double> sss;
+    };
+  };
+};

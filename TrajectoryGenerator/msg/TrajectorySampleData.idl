@@ -1,0 +1,18 @@
+#include "CartesianSampleData.idl"
+#include "CurvilinearSampleData.idl"
+
+module custom_trajectory_msgs {
+  module msg {
+    struct TrajectorySampleData {
+      uint64 size;
+
+      uint64 m_actual_size;
+
+      double m_d_t;
+
+      custom_trajectory_msgs::msg::CurvilinearSampleData m_curvilinear_sample;
+
+      custom_trajectory_msgs::msg::CartesianSampleData m_cartesian_sample;
+    };
+  };
+};

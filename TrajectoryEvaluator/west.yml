@@ -1,0 +1,40 @@
+# Copyright (c) 2022-2024, Arm Limited.
+# SPDX-License-Identifier: Apache-2.0
+
+# The west manifest file for the actuation Zephyr app.
+#
+# The per-installation west configuration file, .west/config, sets the
+# path to the project containing this file in the [manifest] section's
+# "path" variable.
+
+---
+manifest:
+  defaults:
+    remote: upstream
+
+  remotes:
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos
+
+  #
+  # Please add items below based on alphabetical order
+  projects:
+    - name: cmsis
+      revision: 5a00331455dd74e31e80efa383a489faea0590e3
+      path: modules/hal/cmsis
+      groups:
+        - hal
+    - name: hal_nxp
+      revision: ad142f5612d927e29b1f9606e8edade871b8a526
+      path: modules/hal/hal_nxp
+      groups:
+        - hal
+    - name: zephyr
+      revision: 339cd5a45fd2ebba064ef462b71c657336ca0dfe
+      west-commands: scripts/west-commands.yml
+
+  group-filter:
+    - -ci
+
+  self:
+    path: zephyr_app

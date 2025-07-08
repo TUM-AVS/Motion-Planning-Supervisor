@@ -1,0 +1,19 @@
+module custom_trajectory_msgs {
+  module msg {
+    struct CartesianSampleData {
+      sequence<double> x;
+
+      sequence<double> y;
+
+      sequence<double> theta;
+
+      sequence<double> velocity;
+
+      sequence<double> acceleration;
+
+      sequence<double> kappa;
+
+      sequence<double> kappa_dot;
+    };
+  };
+};

@@ -1,0 +1,9 @@
+module custom_trajectory_msgs {
+  module msg {
+    struct ResultData {
+      double m_cost;
+
+      boolean m_feasible;
+    };
+  };
+};

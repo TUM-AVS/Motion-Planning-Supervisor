@@ -1,0 +1,9 @@
+&emdio {
+    /delete-node/ ethernet-phy@7;
+
+    phy0: ethernet-phy@2 {
+        compatible = "ethernet-phy";
+        reg = <0x2>;
+        status = "okay";
+    };
+};
