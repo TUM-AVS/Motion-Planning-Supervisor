@@ -12,7 +12,7 @@ This repository provides an open-source reference implementation of a real-time 
 ## 🛠 About
 
 <details>
-This project accompanies the paper:
+This project accompanies the paper (submitted to IEEE ICVES 2025):
 
 **Towards Safe Autonomous Driving: A Real-Time Safeguarding Concept for Motion Planning Algorithms**  
 *Moller et al., 2025*
