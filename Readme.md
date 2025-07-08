@@ -146,8 +146,8 @@ If you use this code or the ideas in your research, please cite:
 
 ```bibtex
 @article{moller2025realtimesupervisor,
-  author       = {Korbinian Moller and others},
-  title        = {A Real-Time Supervisor for Motion Planning in Autonomous Vehicles},
+  author       = {Korbinian Moller and Rafael Neher and Marvin Seegert and Johannes Betz},
+  title        = {Towards Safe Autonomous Driving: A Real-Time Safeguarding Concept for Motion Planning Algorithms},
   journal      = {To appear},
   year         = {2025},
   note         = {GitHub repository: https://github.com/TUM-AVS/motion-planning-safeguard}
