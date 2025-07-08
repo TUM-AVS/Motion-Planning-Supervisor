@@ -9,10 +9,9 @@ This repository provides an open-source reference implementation of a real-time 
   <img src="images/implementation_architecture.png" width="700"/>
 </div>
 
----
-
 ## 🛠 About
 
+<details>
 This project accompanies the paper:
 
 **Towards Safe Autonomous Driving: A Real-Time Safeguarding Concept for Motion Planning Algorithms**  
@@ -24,12 +23,16 @@ The Supervisor is designed to run on NXP’s S32Z2-based embedded platforms (e.g
 - [Cyclone DDS Middleware](https://github.com/eclipse-cyclonedds/cyclonedds)
 - [ARM Safety Island Actuation Demo](https://gitlab.arm.com/automotive-and-industrial/safety-island/actuation-demo)
 
----
+</details>
 
 ## 🔧 Installation & Build Instructions
 
 <details>
 <summary><strong>📦 Physical Setup</strong></summary>
+
+The image below shows the physical setup required to work with either the ARM Development Platform or the NXP Platform.
+
+![Arm Development Platform Physical Setup](/images/arm_board_physical_setup.jpg)
 
 Connect the embedded board (NXP Evaluation Board or ARM Cortex-R Automotive Development System) as follows:
 
@@ -40,24 +43,23 @@ Connect the embedded board (NXP Evaluation Board or ARM Cortex-R Automotive Deve
 
 > 💡 Use `/dev/ttyUSB*` on Linux or `COM*` on Windows and configure your serial tool (e.g. PuTTY or minicom) to 115200 baud.
 
+> 💡 **Note:** When working with the ARM system, make sure you use the correct ethernet port.
+
 </details>
 
 <details>
 <summary><strong>⚙️ Zephyr RTOS Setup (Supervisor)</strong></summary>
 
 1. **Install Required Tools**
-   - Follow [Zephyr's Getting Started Guide](https://docs.zephyrproject.org/latest/develop/getting_started/index.html)
-   - Install Python dependencies:
-     ```bash
-     pip install -r zephyr/scripts/requirements-base.txt
-     ```
+   Follow [Zephyr's Getting Started Guide](https://docs.zephyrproject.org/latest/develop/getting_started/index.html)
 
 2. **Clone & Configure the Project**
    ```bash
-   git clone https://gitlab.arm.com/automotive-and-industrial/safety-island/actuation-demo.git -b v2
+   git clone https://gitlab.arm.com/automotive-and-industrial/safety-island/actuation-demo.git -b v2.1
    cd actuation-demo
    git submodule init
    git submodule update
+   pip3 install -r zephyr/scripts/requirements-base.txt
    west init -l zephyr_app
    west update
    west zephyr-export
@@ -94,12 +96,10 @@ Connect the embedded board (NXP Evaluation Board or ARM Cortex-R Automotive Deve
 
 3. **Run the Application**
    ```bash
-   ./TrajectoryGenerator
+   ./Trajectory_node
    ```
 
 </details>
-
----
 
 ## 🧪 Evaluation Setup
 
@@ -107,13 +107,9 @@ The system was deployed on two embedded platforms based on the NXP S32Z2 real-ti
 
 For reference, all experiments were repeated on an x86-based host machine featuring an AMD Ryzen 7840HS (up to 5.1 GHz) running Ubuntu 22.04.
 
----
-
 ## 📊 Results & Paper
 
 The Supervisor demonstrates consistent low-latency performance with average evaluation runtimes around 1.1 ms on embedded hardware and jitter under 10%. In contrast to the HPC system, which achieves faster average runtimes, the embedded solution offers more stable execution and bounded variance. A detailed analysis and visualizations are included in the accompanying publication.
-
----
 
 ## 📁 Folder Structure
 
@@ -126,7 +122,6 @@ The Supervisor demonstrates consistent low-latency performance with average eval
 └── README.md
 ```
 
----
 
 ## 👥 Contributors
 
@@ -141,8 +136,6 @@ This project was developed at the [TUM Professorship of Autonomous Vehicle Syste
 - Johannes Betz
 
 </details>
-
----
 
 ## 📖 Citation
 
@@ -163,13 +156,11 @@ If you use this code or the ideas in your research, please cite:
 
 </details>
 
----
 
 ## 🤝 Acknowledgements
 
 We thank ARM for providing access to the Cortex-R Automotive Development System.
 
----
 
 ## 📜 License
 
