@@ -128,7 +128,7 @@ The Supervisor demonstrates consistent low-latency performance with average eval
 <details>
 <summary>Click to expand</summary>
 
-This project was developed at the [TUM Professorship of Autonomous Vehicle Systems](https://www.ce.cit.tum.de/en/avs/), Technical University of Munich.
+This project was developed at the [Professorship of Autonomous Vehicle Systems](https://www.mos.ed.tum.de/en/avs/home/), Technical University of Munich.
 
 - [Korbinian Moller](mailto:korbinian.moller@tum.de) (corresponding author)  
 - Rafael Neher  
