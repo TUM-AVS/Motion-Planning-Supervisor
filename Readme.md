@@ -164,4 +164,4 @@ We thank ARM for providing access to the Cortex-R Automotive Development System.
 
 ## 📜 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See the [LICENSE](LICENSE) file for details.
